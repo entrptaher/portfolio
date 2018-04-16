@@ -347,3 +347,51 @@ button:hover {
 	color: #fff;
 	outline: 0;
 }
+
+/* Portfolio Image */
+.pic {
+  height: 200px;
+  overflow: hidden;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.pic:before {
+  width: 100%;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+}
+
+.pic:after {
+  color: #fff;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -20px -25px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 10px;
+}
+
+img {
+  max-width: 100%;
+  cusor: pointer;
+}
+
+.pic:hover img {
+  animation: moveSlideshow 3s linear;animation-fill-mode: forwards;
+}
+
+@keyframes moveSlideshow {
+  100% {
+    transform: translateY(calc(-100% + 200px));
+  }
+}
+
+.pic:hover .pic:after {
+  opacity: 0;
+}
